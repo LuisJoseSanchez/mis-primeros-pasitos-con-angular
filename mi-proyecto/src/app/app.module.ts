@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +8,12 @@ import { PieDePaginaComponent } from './pie-de-pagina/pie-de-pagina.component';
 import { TextoDeRellenoComponent } from './texto-de-relleno/texto-de-relleno.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { EjemplosInterpolacionComponent } from './ejemplos-interpolacion/ejemplos-interpolacion.component';
+import { PipesComponent } from './pipes/pipes.component';
+
+import es from '@angular/common/locales/es';
+import {registerLocaleData} from '@angular/common';
+
+registerLocaleData(es);
 
 @NgModule({
   declarations: [
@@ -16,13 +22,14 @@ import { EjemplosInterpolacionComponent } from './ejemplos-interpolacion/ejemplo
     PieDePaginaComponent,
     TextoDeRellenoComponent,
     PrincipalComponent,
-    EjemplosInterpolacionComponent
+    EjemplosInterpolacionComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'es' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
