@@ -7,6 +7,7 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { PieDePaginaComponent } from './pie-de-pagina/pie-de-pagina.component';
 import { TextoDeRellenoComponent } from './texto-de-relleno/texto-de-relleno.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { EjemplosInterpolacionComponent } from './ejemplos-interpolacion/ejemplos-interpolacion.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PrincipalComponent } from './principal/principal.component';
     CabeceraComponent,
     PieDePaginaComponent,
     TextoDeRellenoComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    EjemplosInterpolacionComponent
   ],
   imports: [
     BrowserModule,
