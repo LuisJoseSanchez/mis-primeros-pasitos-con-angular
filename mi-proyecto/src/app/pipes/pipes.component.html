@@ -12,5 +12,7 @@
 {{ hoy | date:'full'}}<br>
 {{ hoy | date:'fullDate' | uppercase }}<br>
 <!-- Pipe personalizada -->
-"{{ textoIngles }}" en inglés es {{ textoIngles | traduce: 'es' }} en español<br>
-"Hello World!" en inglés es {{ "Hello world!" | traduce: 'ru' }} en ruso
+<b>{{ textoIngles }}</b> en inglés es <b>{{ textoIngles | traduce: 'es' }}</b>
+en español y <b>{{ textoIngles | traduce: 'ru' }}</b> en ruso<br>
+<b>Hello World!</b> en inglés es <b>{{ "Hello world!" | traduce: 'ru' }}</b> en ruso y
+<b>{{ "Hello world!" | traduce: 'es' }}</b> en español.
