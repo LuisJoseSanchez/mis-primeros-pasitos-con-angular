@@ -12,6 +12,8 @@ export class PipesComponent implements OnInit {
   pi: number = Math.PI;
   hoy: Date = new Date();
 
+  textoIngles = 'red';
+
   constructor() { }
 
   ngOnInit(): void {
