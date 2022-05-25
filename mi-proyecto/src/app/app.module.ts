@@ -12,6 +12,7 @@ import { PipesComponent } from './pipes/pipes.component';
 
 import es from '@angular/common/locales/es';
 import {registerLocaleData} from '@angular/common';
+import { TraducePipe } from './traduce.pipe';
 
 registerLocaleData(es);
 
@@ -23,7 +24,8 @@ registerLocaleData(es);
     TextoDeRellenoComponent,
     PrincipalComponent,
     EjemplosInterpolacionComponent,
-    PipesComponent
+    PipesComponent,
+    TraducePipe
   ],
   imports: [
     BrowserModule,
