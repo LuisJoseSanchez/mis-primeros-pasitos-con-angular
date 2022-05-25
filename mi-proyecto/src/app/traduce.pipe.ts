@@ -20,7 +20,6 @@ type Idioma = 'en' | 'es' | 'ru';
 })
 export class TraducePipe implements PipeTransform {
 
-
   transform(texto: string, idioma: Idioma): string {
     const traduccion = TRADUCCIONES.filter(t => t['en'] === texto)[0];
 
