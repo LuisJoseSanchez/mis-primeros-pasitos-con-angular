@@ -28,6 +28,8 @@ export class EjemplosCapitulo05Component implements OnInit {
     this.texto = '...buena sombra le cobija.';
   }
 
+  //---------------------------------------------
+
   generaAleatorio() {
     this.numero = Math.floor(Math.random() * 100);
   }

@@ -1,12 +1,11 @@
-<button (click)="saluda()">Saluda</button>
-<br><br>
+<button (click)="saluda()">Saluda</button> <br /><br />
 <button (click)="limpia()">Limpia pantalla</button>
-<br><br>
+<br /><br />
 <span (click)="completaRefran()">A quien a buen árbol se arrima...</span>
-<br><br>
+<br /><br />
 {{ texto }}
 
-<hr>
+<hr />
 
 <button (click)="generaAleatorio()">Genera aleatorio</button>
 <button (click)="incrementa(-numero)">Resetea</button>
@@ -14,4 +13,12 @@
 <button (click)="incrementa(-1)">-</button>
 <button (click)="incrementa(10)">+10</button>
 <button (click)="incrementa(-10)">-10</button>
+<input
+  type="text"
+  (keydown.q)="incrementa(1)"
+  (keydown.a)="incrementa(-1)"
+  (keydown.w)="incrementa(10)"
+  (keydown.s)="incrementa(-10)"
+  (keydown.enter)="incrementa(-numero)"
+/>
 <h1>{{ numero }}</h1>
