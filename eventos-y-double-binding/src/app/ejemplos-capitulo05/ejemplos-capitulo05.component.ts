@@ -8,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class EjemplosCapitulo05Component implements OnInit {
 
   texto = '';
+  numero = 0
 
   constructor() { }
 
   ngOnInit(): void {
+    this.generaAleatorio();
   }
 
   saluda() {
@@ -24,5 +26,13 @@ export class EjemplosCapitulo05Component implements OnInit {
 
   completaRefran() {
     this.texto = '...buena sombra le cobija.';
+  }
+
+  generaAleatorio() {
+    this.numero = Math.floor(Math.random() * 100);
+  }
+
+  incrementa(n: number) {
+    this.numero += n;
   }
 }
