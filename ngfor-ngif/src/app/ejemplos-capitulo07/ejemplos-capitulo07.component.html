@@ -10,3 +10,12 @@ Inserta número:
 <br />
 Inserta fruta:
 <input [(ngModel)]="frutaIntroducida" (keyup.enter)="insertaFruta()" type="text" />
+
+<hr>
+
+<p *ngFor="let empleado of listaDeEmpleados">
+  <b>{{ empleado.nombre }}</b><br>
+  {{ empleado.puesto }}, {{ empleado.salario }} €
+</p>
+
+<hr>
