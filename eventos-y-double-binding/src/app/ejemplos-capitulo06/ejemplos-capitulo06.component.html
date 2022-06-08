@@ -1,3 +1,14 @@
-<input type="text" [(ngModel)]="texto" />
-<br /><br />
+<input type="text" [(ngModel)]="texto" /> <br /><br />
 {{ texto | uppercase }}
+
+<hr />
+
+Euros:
+<input
+  type="number"
+  step="0.01"
+  [(ngModel)]="euros"
+  [value]="pesetas / 166.386"/><br /><br />
+
+Pesetas:
+<input [(ngModel)]="pesetas" type="number" />

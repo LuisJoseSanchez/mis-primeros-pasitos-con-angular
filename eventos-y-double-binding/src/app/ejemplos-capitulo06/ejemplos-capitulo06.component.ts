@@ -9,9 +9,16 @@ export class EjemplosCapitulo06Component implements OnInit {
 
   texto = '';
   
+  euros = 0;
+  pesetas = 0;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  reset() {
+    this.euros = 0;
+    this.pesetas = 0;
+  }
 }
