@@ -21,4 +21,12 @@ export class EjemplosCapitulo06Component implements OnInit {
     this.euros = 0;
     this.pesetas = 0;
   }
+
+  actualizaPesetas() {
+    this.pesetas = +(this.euros * 166.386).toFixed(0);
+  }
+
+  actualizaEuros() {
+    this.euros = +(this.pesetas / 166.386).toFixed(2);
+  }
 }

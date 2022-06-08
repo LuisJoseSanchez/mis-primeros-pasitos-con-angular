@@ -8,7 +8,16 @@ Euros:
   type="number"
   step="0.01"
   [(ngModel)]="euros"
-  [value]="pesetas / 166.386"/><br /><br />
+  (keyup)="actualizaPesetas()"
+/>
+<br />
 
 Pesetas:
-<input [(ngModel)]="pesetas" type="number" />
+<input
+  type="number"
+  [(ngModel)]="pesetas"
+  (keyup)="actualizaEuros()"
+/>
+<br />
+
+<button (click)="reset()">Reset</button>
