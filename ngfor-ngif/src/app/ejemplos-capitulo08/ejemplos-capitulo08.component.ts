@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EjemplosCapitulo08Component implements OnInit {
 
+  temperatura = 20;
+
   constructor() { }
 
   ngOnInit(): void {

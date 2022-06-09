@@ -1,1 +1,13 @@
-<p>ejemplos-capitulo08 works!</p>
+<h1>{{ temperatura }} ºC</h1>
+
+<input [(ngModel)]="temperatura" type="range" min="-30" max="50" />
+
+<div *ngIf="temperatura > 36">
+  <img width="50" src="../../assets/img/sol.png" />
+  <p>¡Qué calor!</p>
+</div>
+
+<div *ngIf="temperatura < 10">
+  <img width="50" src="../../assets/img/nieve.png" />
+  <p>¡Qué frío hace!</p>
+</div>
