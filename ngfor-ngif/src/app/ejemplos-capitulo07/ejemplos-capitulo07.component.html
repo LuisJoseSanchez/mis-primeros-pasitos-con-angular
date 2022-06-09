@@ -19,3 +19,9 @@ Inserta fruta:
 </p>
 
 <hr>
+
+<p *ngFor="let f of frutas; index as i">
+  Fruta nº {{ i + 1 }}: {{ f }}
+</p>
+
+<hr>
