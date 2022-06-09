@@ -1,4 +1,6 @@
 export class Tarea {
-  id!: number;
-  titulo: string;
+  id: number = 0;
+  titulo: string = '';
+  descripcion: string = '';
+  realizada: boolean = false;
 }

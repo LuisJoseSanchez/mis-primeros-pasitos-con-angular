@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Tarea } from './model/tarea';
+import { TareasService } from './tareas.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'lista-de-tareas';
+  tareasPendientes: Tarea[] = [];
+  tareasRealizadas: Tarea[] = [];
+
+  constructor(private tareasService: TareasService) {
+    this.tareasPendientes = this.tareasService.getTareasPendientes();
+    this.tareasRealizadas = this.tareasService.getTareasRealizadas();
+  }
 }
