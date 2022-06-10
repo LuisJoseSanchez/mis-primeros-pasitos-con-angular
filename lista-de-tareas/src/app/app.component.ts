@@ -8,18 +8,18 @@ import { TareasService } from './tareas.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  tareasPendientes: Tarea[] = [];
-  tareasRealizadas: Tarea[] = [];
+  // tareasPendientes: Tarea[] = [];
+  // tareasRealizadas: Tarea[] = [];
 
-  titulo = '';
-  descripcion = '';
-
-  constructor(private tareasService: TareasService) {
-    this.tareasPendientes = this.tareasService.getTareasPendientes();
-    this.tareasRealizadas = this.tareasService.getTareasRealizadas();
+  tarea: Tarea = new Tarea();
+  
+  constructor(public tareasService: TareasService) {
+    // this.tareasPendientes = this.tareasService.getTareasPendientes();
+    // this.tareasRealizadas = this.tareasService.getTareasRealizadas();
   }
 
   creaTarea() {
-    this.tareasService.creaTarea();
+    this.tareasService.creaTarea(this.tarea);
+    this.tarea = new Tarea();
   }
 }

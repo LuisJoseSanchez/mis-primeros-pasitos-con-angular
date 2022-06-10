@@ -1,20 +1,18 @@
 <h2>Nueva tarea</h2>
-Título:
-<input type="text" [(ngModel)]="titulo">
-Descripción:
-<input type="text" [(ngModel)]="descripcion">
-<button ()>Añadir</button>
+Título: <input type="text" [(ngModel)]="tarea.titulo"><br>
+Descripción: <input type="text" [(ngModel)]="tarea.descripcion"><br>
+<button (click)="creaTarea()">Añadir</button>
 
 <h2>Tareas pendientes</h2>
 <ul>
-  <li class="pendiente" *ngFor="let t of tareasPendientes">
+  <li class="pendiente" *ngFor="let t of tareasService.getTareasPendientes()">
     {{ t.titulo }}
   </li>
 </ul>
 
 <h2>Tareas realizadas</h2>
 <ul>
-  <li class="realizada" *ngFor="let t of tareasRealizadas">
+  <li class="realizada" *ngFor="let t of tareasService.getTareasRealizadas()">
     <del>{{ t.titulo }}</del>
   </li>
 </ul>
