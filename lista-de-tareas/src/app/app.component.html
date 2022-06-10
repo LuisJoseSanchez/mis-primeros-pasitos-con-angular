@@ -1,3 +1,10 @@
+<h2>Nueva tarea</h2>
+Título:
+<input type="text" [(ngModel)]="titulo">
+Descripción:
+<input type="text" [(ngModel)]="descripcion">
+<button ()>Añadir</button>
+
 <h2>Tareas pendientes</h2>
 <ul>
   <li class="pendiente" *ngFor="let t of tareasPendientes">
