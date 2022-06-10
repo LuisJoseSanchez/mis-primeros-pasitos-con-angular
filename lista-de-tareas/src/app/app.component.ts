@@ -11,6 +11,9 @@ export class AppComponent {
   tareasPendientes: Tarea[] = [];
   tareasRealizadas: Tarea[] = [];
 
+  titulo = '';
+  descripcion = '';
+
   constructor(private tareasService: TareasService) {
     this.tareasPendientes = this.tareasService.getTareasPendientes();
     this.tareasRealizadas = this.tareasService.getTareasRealizadas();
