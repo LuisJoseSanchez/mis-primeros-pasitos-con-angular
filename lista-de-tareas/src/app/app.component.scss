@@ -9,3 +9,12 @@ li.pendiente:before {
 li.realizada:before {
   content: '☒ ';
 }
+
+.titulo {
+  display: inline-block;
+  width: 240px;
+}
+
+button {
+  margin: 2px;
+}

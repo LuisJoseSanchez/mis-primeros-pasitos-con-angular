@@ -6,13 +6,19 @@ Descripción: <input type="text" [(ngModel)]="tarea.descripcion"><br>
 <h2>Tareas pendientes</h2>
 <ul>
   <li class="pendiente" *ngFor="let t of tareasService.getTareasPendientes()">
-    {{ t.titulo }}
+    <span class="titulo">{{ t.titulo }}</span>
+    <button (click)="tareasService.marcaComoRealizada(t.id)">
+      Hacer
+    </button>
   </li>
 </ul>
 
 <h2>Tareas realizadas</h2>
 <ul>
   <li class="realizada" *ngFor="let t of tareasService.getTareasRealizadas()">
-    <del>{{ t.titulo }}</del>
+    <span class="titulo"><del>{{ t.titulo }}</del></span>
+    <button (click)="tareasService.marcaComoPendiente(t.id)">
+      Deshacer
+    </button>
   </li>
 </ul>

@@ -8,15 +8,9 @@ import { TareasService } from './tareas.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // tareasPendientes: Tarea[] = [];
-  // tareasRealizadas: Tarea[] = [];
-
   tarea: Tarea = new Tarea();
   
-  constructor(public tareasService: TareasService) {
-    // this.tareasPendientes = this.tareasService.getTareasPendientes();
-    // this.tareasRealizadas = this.tareasService.getTareasRealizadas();
-  }
+  constructor(public tareasService: TareasService) {}
 
   creaTarea() {
     this.tareasService.creaTarea(this.tarea);

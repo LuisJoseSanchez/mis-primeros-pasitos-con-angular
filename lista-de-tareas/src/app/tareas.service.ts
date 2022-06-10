@@ -57,4 +57,14 @@ export class TareasService {
   borraTarea(id: number) {
     this.tareas = this.tareas.filter(t => t.id != id);
   }
+
+  marcaComoRealizada(id: number) {
+    const indice = this.tareas.map(t => t.id).indexOf(id);
+    this.tareas[indice].realizada = true;
+  }
+
+  marcaComoPendiente(id: number) {
+    const indice = this.tareas.map(t => t.id).indexOf(id);
+    this.tareas[indice].realizada = false;
+  }
 }
