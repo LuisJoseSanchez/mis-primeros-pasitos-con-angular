@@ -18,4 +18,8 @@ export class AppComponent {
     this.tareasPendientes = this.tareasService.getTareasPendientes();
     this.tareasRealizadas = this.tareasService.getTareasRealizadas();
   }
+
+  creaTarea() {
+    this.tareasService.creaTarea();
+  }
 }
