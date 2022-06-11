@@ -8,9 +8,8 @@
     <button (click)="tareasService.borraTarea(t.id)">
       Borrar
     </button>
-    <button [routerLink]="'/detalle/' + t.id">
-      Detalle
-    </button>
+    <button [routerLink]="'/detalle/' + t.id">Detalle</button>
+    <button [routerLink]="'/formulario-tarea/' + t.id">Editar</button>
   </li>
 </ul>
 
@@ -24,9 +23,8 @@
     <button (click)="tareasService.borraTarea(t.id)">
       Borrar
     </button>
-    <button [routerLink]="'/detalle/' + t.id">
-      Detalle
-    </button>
+    <button [routerLink]="'/detalle/' + t.id">Detalle</button>
+    <button [routerLink]="'/formulario-tarea/' + t.id">Editar</button>
   </li>
 </ul>
 

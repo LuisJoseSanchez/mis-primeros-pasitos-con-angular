@@ -1,1 +1,8 @@
-<p>formulario works!</p>
+<h2>{{ accion }}</h2>
+
+Título: <input type="text" [(ngModel)]="tarea.titulo"><br>
+Descripción: <input type="text" [(ngModel)]="tarea.descripcion">
+<br><br>
+
+<button (click)="procesaTarea()">Aceptar</button>&nbsp;
+<button routerLink="/listado">Cancelar</button>

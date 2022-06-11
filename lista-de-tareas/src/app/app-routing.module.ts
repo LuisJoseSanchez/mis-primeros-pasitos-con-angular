@@ -8,7 +8,7 @@ import { Pagina404Component } from './pagina404/pagina404.component';
 const routes: Routes = [
   { path: 'listado', component: ListadoComponent },
   { path: 'detalle/:id', component: DetalleComponent },
-  { path: 'formulario/:id', component: FormularioComponent },
+  { path: 'formulario-tarea/:id', component: FormularioComponent },
   { path: 'formulario-tarea', component: FormularioComponent },
   { path: '',   redirectTo: '/listado', pathMatch: 'full' },
   { path: '**', component: Pagina404Component },

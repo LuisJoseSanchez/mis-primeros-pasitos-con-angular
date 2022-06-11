@@ -36,7 +36,7 @@ export class TareasService {
   }
 
   getTarea(id: number) {
-    return this.tareas.find(t => t.id == id);
+    return {...this.tareas.find(t => t.id == id)};
   }
 
   getTareasPendientes() {
