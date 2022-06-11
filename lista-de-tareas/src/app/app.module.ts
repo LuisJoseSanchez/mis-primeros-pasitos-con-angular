@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ListadoComponent } from './listado/listado.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { DetalleComponent } from './detalle/detalle.component';
+import { Pagina404Component } from './pagina404/pagina404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListadoComponent,
     FormularioComponent,
-    DetalleComponent
+    DetalleComponent,
+    Pagina404Component
   ],
   imports: [
     BrowserModule,
