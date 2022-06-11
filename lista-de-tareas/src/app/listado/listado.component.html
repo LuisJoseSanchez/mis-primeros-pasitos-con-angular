@@ -1,1 +1,33 @@
-<p>listado works!</p>
+<h2>Tareas pendientes</h2>
+<ul>
+  <li class="pendiente" *ngFor="let t of tareasService.getTareasPendientes()">
+    <span class="titulo">{{ t.titulo }}</span>
+    <button (click)="tareasService.marcaComoRealizada(t.id)">
+      Hacer
+    </button>
+    <button (click)="tareasService.borraTarea(t.id)">
+      Borrar
+    </button>
+    <button [routerLink]="'/detalle/' + t.id">
+      Detalle
+    </button>
+  </li>
+</ul>
+
+<h2>Tareas realizadas</h2>
+<ul>
+  <li class="realizada" *ngFor="let t of tareasService.getTareasRealizadas()">
+    <span class="titulo"><del>{{ t.titulo }}</del></span>
+    <button (click)="tareasService.marcaComoPendiente(t.id)">
+      Deshacer
+    </button>
+    <button (click)="tareasService.borraTarea(t.id)">
+      Borrar
+    </button>
+    <button [routerLink]="'/detalle/' + t.id">
+      Detalle
+    </button>
+  </li>
+</ul>
+
+<button routerLink="/formulario-tarea">Nueva tarea</button>

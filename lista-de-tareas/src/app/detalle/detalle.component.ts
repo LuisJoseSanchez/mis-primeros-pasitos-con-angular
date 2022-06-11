@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Tarea } from '../model/tarea';
+import { TareasService } from '../tareas.service';
 
 @Component({
   selector: 'app-detalle',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleComponent implements OnInit {
 
-  constructor() { }
+  tarea: Tarea = new Tarea();
+
+  constructor(
+    private tareasService: TareasService,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    const id = this.activatedRoute.snapshot.paramMap.get('id') as unknown as number;
+    this.tarea = <Tarea>this.tareasService.getTarea(id);
   }
 
 }

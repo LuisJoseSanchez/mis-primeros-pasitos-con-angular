@@ -1,0 +1,20 @@
+ul {
+  list-style: none;
+}
+
+li.pendiente:before {
+  content: '□';
+}
+
+li.realizada:before {
+  content: '☒ ';
+}
+
+.titulo {
+  display: inline-block;
+  width: 240px;
+}
+
+button {
+  margin: 2px;
+}

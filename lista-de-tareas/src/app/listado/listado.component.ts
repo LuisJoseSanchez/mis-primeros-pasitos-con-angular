@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tarea } from '../model/tarea';
+import { TareasService } from '../tareas.service';
 
 @Component({
   selector: 'app-listado',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoComponent implements OnInit {
 
-  constructor() { }
+  tarea: Tarea = new Tarea();
+  
+  constructor(public tareasService: TareasService) {}
 
   ngOnInit(): void {
   }
 
+  creaTarea() {
+    this.tareasService.creaTarea(this.tarea);
+    this.tarea = new Tarea();
+  }
 }

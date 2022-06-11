@@ -1,20 +1,19 @@
-ul {
-  list-style: none;
+.cabecera,
+.pie-de-pagina {
+  background-color: aquamarine;
+  width: 100vw;
+  padding-left: 8px;
 }
 
-li.pendiente:before {
-  content: '□';
+.cabecera {
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+  top: -20px;
 }
 
-li.realizada:before {
-  content: '☒ ';
-}
-
-.titulo {
-  display: inline-block;
-  width: 240px;
-}
-
-button {
-  margin: 2px;
+.pie-de-pagina {
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }

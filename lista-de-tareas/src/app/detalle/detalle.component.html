@@ -1,1 +1,4 @@
-<p>detalle works!</p>
+<h2>{{ tarea.titulo }}</h2>
+<p>{{ tarea.descripcion }}</p>
+<p>Esta tarea {{ tarea.realizada ? '' : 'no ' }}está realizada.</p>
+<button routerLink="/">Volver a la lista</button>

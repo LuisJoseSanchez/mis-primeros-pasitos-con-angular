@@ -1,30 +1,7 @@
-<h2>Nueva tarea</h2>
+<!-- <h2>Nueva tarea</h2>
 Título: <input type="text" [(ngModel)]="tarea.titulo"><br>
 Descripción: <input type="text" [(ngModel)]="tarea.descripcion"><br>
-<button (click)="creaTarea()">Añadir</button>
-
-<h2>Tareas pendientes</h2>
-<ul>
-  <li class="pendiente" *ngFor="let t of tareasService.getTareasPendientes()">
-    <span class="titulo">{{ t.titulo }}</span>
-    <button (click)="tareasService.marcaComoRealizada(t.id)">
-      Hacer
-    </button>
-    <button (click)="tareasService.borraTarea(t.id)">
-      Borrar
-    </button>
-  </li>
-</ul>
-
-<h2>Tareas realizadas</h2>
-<ul>
-  <li class="realizada" *ngFor="let t of tareasService.getTareasRealizadas()">
-    <span class="titulo"><del>{{ t.titulo }}</del></span>
-    <button (click)="tareasService.marcaComoPendiente(t.id)">
-      Deshacer
-    </button>
-    <button (click)="tareasService.borraTarea(t.id)">
-      Borrar
-    </button>
-  </li>
-</ul>
+<button (click)="creaTarea()">Añadir</button> -->
+<div class="cabecera"><h1>Lista de tareas</h1></div>
+<router-outlet></router-outlet>
+<div class="pie-de-pagina"><h3>Mis primeros pasitos con Angular</h3></div>

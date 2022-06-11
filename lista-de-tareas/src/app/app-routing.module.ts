@@ -9,9 +9,9 @@ const routes: Routes = [
   { path: 'listado', component: ListadoComponent },
   { path: 'detalle/:id', component: DetalleComponent },
   { path: 'formulario/:id', component: FormularioComponent },
-  { path: 'formulario', component: FormularioComponent },
+  { path: 'formulario-tarea', component: FormularioComponent },
   { path: '',   redirectTo: '/listado', pathMatch: 'full' },
-  { path: '**', component: Pagina404Component },  // Wildcard route for a 404 page
+  { path: '**', component: Pagina404Component },
 ];
 
 @NgModule({
