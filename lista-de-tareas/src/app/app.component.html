@@ -10,6 +10,9 @@ Descripción: <input type="text" [(ngModel)]="tarea.descripcion"><br>
     <button (click)="tareasService.marcaComoRealizada(t.id)">
       Hacer
     </button>
+    <button (click)="tareasService.borraTarea(t.id)">
+      Borrar
+    </button>
   </li>
 </ul>
 
@@ -19,6 +22,9 @@ Descripción: <input type="text" [(ngModel)]="tarea.descripcion"><br>
     <span class="titulo"><del>{{ t.titulo }}</del></span>
     <button (click)="tareasService.marcaComoPendiente(t.id)">
       Deshacer
+    </button>
+    <button (click)="tareasService.borraTarea(t.id)">
+      Borrar
     </button>
   </li>
 </ul>
