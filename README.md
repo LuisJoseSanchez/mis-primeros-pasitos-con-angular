@@ -1,2 +1,3 @@
-# mis-primeros-pasitos-con-angular
-Mis primeros pasitos con Angular. Ejemplos y soluciones a los ejercicios.
+# Mis primeros pasitos con Angular
+
+Incluye el código de todos los ejemplos del libro.
