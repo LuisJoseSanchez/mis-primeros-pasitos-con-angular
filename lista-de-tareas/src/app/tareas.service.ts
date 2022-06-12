@@ -31,23 +31,23 @@ export class TareasService {
     ];
   }
 
-  getTareas() {
+  getTareas(): Tarea[] {
     return this.tareas;
   }
 
-  getTarea(id: number) {
-    return {...this.tareas.find(t => t.id == id)};
+  getTarea(id: number): Tarea {
+    return <Tarea>{...this.tareas.find(t => t.id == id)};
   }
 
-  getTareasPendientes() {
+  getTareasPendientes(): Tarea[] {
     return this.tareas.filter(t => !t.realizada);
   }
 
-  getTareasRealizadas() {
+  getTareasRealizadas(): Tarea[] {
     return this.tareas.filter(t => t.realizada);
   }
 
-  private idMaximo() {
+  private idMaximo(): number {
     return this.tareas
       .map(t => t.id)
       .reduce((i, maximo) => Math.max(i, maximo), 0);
