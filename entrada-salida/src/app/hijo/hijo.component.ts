@@ -23,6 +23,5 @@ export class HijoComponent implements OnInit {
 
   enviaMensaje() {
     this.mensajeDeSalida.emit({mensaje: this.mensajeParaElPadre});
-    console.log(this.mensajeParaElPadre);
   }
 }
