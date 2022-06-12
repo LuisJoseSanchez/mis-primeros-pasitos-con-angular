@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PadreComponent implements OnInit {
 
+  mensajeParaElHijo = '';
+  mensajeDelHijo = '';
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  actualizaMensajeDelHijo(event: any) {
+    this.mensajeDelHijo = event.mensaje;
+  }
 }

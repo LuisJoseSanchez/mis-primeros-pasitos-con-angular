@@ -1,1 +1,5 @@
-<p>hijo works!</p>
+<div>
+  <h2>Hijo</h2>
+  <input [(ngModel)]="mensajeParaElPadre" (keyup)="enviaMensaje()"/>
+  <p>El padre dice: {{ mensajeDeEntrada }}</p>
+</div>

@@ -1,1 +1,10 @@
-<p>padre works!</p>
+<div>
+  <h2>Padre</h2>
+  <input [(ngModel)]="mensajeParaElHijo" />
+  <p>El hijo dice: {{ mensajeDelHijo }}</p>
+  <app-hijo
+    [mensajeDeEntrada]="mensajeParaElHijo"
+    (mensajeDeSalida)="actualizaMensajeDelHijo($event)"
+  >
+  </app-hijo>
+</div>
